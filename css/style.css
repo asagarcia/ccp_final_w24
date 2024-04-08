@@ -56,6 +56,14 @@ nav ul {
     border: 2px solid white;
     border-radius: 10px;
   }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
 h1 {
     font-size: xx-large;
     text-align: center;
@@ -63,12 +71,19 @@ h1 {
 }
 h2 {
     font-size: x-large;
-    margin: 20px 20px 20px 20px;
+    margin: 20px 20px 10px 20px;
+    border: 2px dotted black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
 }
 h3 {
     font-size: larger;
     font-weight: bold;
     margin: 20px;
+}
+p {
+  padding: 20px;
 }
 .grid-discussion {
     display: grid;
@@ -113,8 +128,10 @@ h3 {
 @media (min-width: 800px) {
   .grid-discussion {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .grid-discussion .discussion-item {
@@ -128,4 +145,11 @@ h3 {
   .grid-discussion .discussion-item:hover {
     transform: translateY(-5px);
   }
+}
+
+@media (min-width: 1200px) {
+  h2 {
+    margin: 100px 500px 20px 500px;
+  }
+
 }
